@@ -1,0 +1,186 @@
+{
+    "type": "object",
+    "properties": {
+        "versionNumber": {
+            "required": true,
+            "enum": [
+                1
+            ],
+            "type": "integer"
+        },
+        "origin": {
+            "required": true,
+            "type": "string"
+        },
+        "contentType": {
+            "required": true,
+            "default": "xml",
+            "enum": [
+                "xml",
+                "json",
+                "jsonp"
+            ],
+            "type": "string"
+        },
+        "fuelBudgetInLiters": {
+            "format": "float",
+            "minimum": 0,
+            "type": "number"
+        },
+        "energyBudgetInkWh": {
+            "format": "float",
+            "minimum": 0,
+            "type": "number"
+        },
+        "timeBudgetInSec": {
+            "format": "float",
+            "minimum": 0,
+            "type": "number"
+        },
+        "callback": {
+            "default": "callback",
+            "type": "string"
+        },
+        "report": {
+            "enum": [
+                "effectiveSettings"
+            ],
+            "type": "string"
+        },
+        "departAt": {
+            "default": "now",
+            "type": "string"
+        },
+        "arriveAt": {
+            "format": "dateTime",
+            "type": "string"
+        },
+        "routeType": {
+            "default": "fastest",
+            "enum": [
+                "fastest",
+                "shortest",
+                "eco",
+                "thrilling"
+            ],
+            "type": "string"
+        },
+        "traffic": {
+            "default": true,
+            "type": "boolean"
+        },
+        "avoid": {
+            "type": "string"
+        },
+        "travelMode": {
+            "default": "car",
+            "enum": [
+                "car",
+                "truck",
+                "taxi",
+                "bus",
+                "van",
+                "motorcycle",
+                "bicycle",
+                "pedestrian"
+            ],
+            "type": "string"
+        },
+        "hilliness": {
+            "default": "normal",
+            "enum": [
+                "low",
+                "normal",
+                "high"
+            ],
+            "type": "string"
+        },
+        "windingness": {
+            "default": "normal",
+            "enum": [
+                "low",
+                "normal",
+                "high"
+            ],
+            "type": "string"
+        },
+        "vehicleMaxSpeed": {
+            "default": 0,
+            "type": "integer"
+        },
+        "vehicleWeight": {
+            "default": 0,
+            "type": "integer"
+        },
+        "vehicleAxleWeight": {
+            "default": 0,
+            "type": "integer"
+        },
+        "vehicleLength": {
+            "default": 0,
+            "format": "float",
+            "type": "number"
+        },
+        "vehicleWidth": {
+            "default": 0,
+            "format": "float",
+            "type": "number"
+        },
+        "vehicleHeight": {
+            "default": 0,
+            "format": "float",
+            "type": "number"
+        },
+        "vehicleCommercial": {
+            "default": false,
+            "type": "boolean"
+        },
+        "vehicleLoadType": {
+            "type": "string"
+        },
+        "constantSpeedConsumptionInLitersPerHundredkm": {
+            "pattern": "^((\\d+\\.?\\d*,\\d+\\.?\\d*):?)+$",
+            "type": "string"
+        },
+        "currentFuelInLiters": {
+            "format": "float",
+            "type": "number"
+        },
+        "auxiliaryPowerInLitersPerHour": {
+            "format": "float",
+            "type": "number"
+        },
+        "fuelEnergyDensityInMJoulesPerLiter": {
+            "format": "float",
+            "type": "number"
+        },
+        "accelerationEfficiency": {
+            "format": "float",
+            "type": "number"
+        },
+        "decelerationEfficiency": {
+            "format": "float",
+            "type": "number"
+        },
+        "uphillEfficiency": {
+            "format": "float",
+            "type": "number"
+        },
+        "downhillEfficiency": {
+            "format": "float",
+            "type": "number"
+        },
+        "vehicleEngineType": {
+            "default": "combustion",
+            "enum": [
+                "combustion",
+                "electric"
+            ],
+            "type": "string"
+        },
+        "constantSpeedConsumptionInkWhPerHundredkm": {
+            "pattern": "^((\\d+\\.?\\d*,\\d+\\.?\\d*):?)+$",
+            "type": "string"
+        }
+    }
+}
